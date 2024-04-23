@@ -1,51 +1,31 @@
 "use client";
 
-import Link from "next/link";
-import "./style.css";
 import { usePathname } from "next/navigation";
+import { Container, NavLinks, StyledLink } from "./style";
 
 export default function Header() {
   const pathname = usePathname();
   const isPathActive = (href: string) => pathname === href;
 
   return (
-    <div className="container">
-      <Link
-        href="/instruments"
-        className={
-          isPathActive("/instruments") ? "active-link" : "standard-link"
-        }
-      >
-        Instrumentos
-      </Link>
-      <Link
-        href="/accessories"
-        className={
-          isPathActive("/accessories") ? "active-link" : "standard-link"
-        }
-      >
-        Acessórios
-      </Link>
-      <Link
-        href="/cart"
-        className={isPathActive("/cart") ? "active-link" : "standard-link"}
-      >
-        Carrinho
-      </Link>
-      <Link
-        href="/about"
-        className={isPathActive("/about") ? "active-link" : "standard-link"}
-      >
-        Sobre
-      </Link>
-      <Link
-        href="/my-account"
-        className={
-          isPathActive("/my-account") ? "active-link" : "standard-link"
-        }
-      >
-        Minha conta
-      </Link>
-    </div>
+    <Container>
+      <NavLinks>
+        <StyledLink href="/instruments" active={isPathActive("/instruments")}>
+          Instrumentos
+        </StyledLink>
+        <StyledLink href="/accessories" active={isPathActive("/accessories")}>
+          Acessórios
+        </StyledLink>
+        <StyledLink href="/cart" active={isPathActive("/cart")}>
+          Carrinho
+        </StyledLink>
+        <StyledLink href="/about" active={isPathActive("/about")}>
+          Sobre
+        </StyledLink>
+        <StyledLink href="/my-account" active={isPathActive("/my-account")}>
+          Minha conta
+        </StyledLink>
+      </NavLinks>
+    </Container>
   );
 }

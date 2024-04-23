@@ -5,11 +5,26 @@ export const Container = styled.div`
   margin-bottom: 20px;
   border: 2px solid #2a2a2a;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-export const Description = styled.p``;
+export const Description = styled.p`
+  font-family: "Londrina Solid", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #2a2a2a;
+  width: 90%;
+  text-align: center;
+`;
 
-export const Value = styled.p``;
+export const Value = styled.p`
+  font-family: "Londrina Solid", sans-serif;
+  margin-bottom: 10px;
+  color: #2a2a2a;
+  font-size: 32px;
+`;
 
 export const AddCart = styled.button`
   font-family: "Londrina Solid", sans-serif;

@@ -12,8 +12,10 @@ export default function ProductCard() {
         alt="Gibson Blueberry"
         style={{ borderRadius: "8px", marginTop: "10px" }}
       />
-      <Description>Descrição</Description>
-      <Value>R$ Valor</Value>
+      <Description>
+        Guitarra Gibson Les Paul Standard 60s - Blueberry Burst
+      </Description>
+      <Value>R$ 38.990,00</Value>
       <AddCart>Adicionar ao carrinho</AddCart>
     </Container>
   );
