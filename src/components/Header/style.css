@@ -1,15 +1,16 @@
 .container {
   background-color: #2a2a2a;
-  height: 200px;
+  height: 160px;
   width: 100vw;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .standard-link {
-  height: 80px;
+  height: 68px;
   font-family: "Londrina Solid", sans-serif;
-  font-size: 36px;
+  font-size: 28px;
   color: #ffffff;
   text-transform: uppercase;
   border: 2px solid transparent;
@@ -23,9 +24,9 @@
 }
 
 .active-link {
-  height: 80px;
+  height: 68px;
   font-family: "Londrina Solid", sans-serif;
-  font-size: 36px;
+  font-size: 28px;
   color: #ffffff;
   text-transform: uppercase;
   border: 2px solid #ffffff;

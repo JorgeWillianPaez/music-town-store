@@ -1,13 +1,19 @@
 "use client";
 
-import Link from "next/link";
-import { Container } from "./style";
+import { Container, Button, Content } from "./style";
+import { useRouter } from "next/navigation";
 
 export default function NotFound() {
+  const router = useRouter();
+
   return (
     <Container>
-      <h2>Página não encontrada</h2>
-      <Link href="/instruments">Return Home</Link>
+      <Content>
+        <h2>Página não encontrada</h2>
+        <Button onClick={() => router.push("/instruments")}>
+          Voltar para Home
+        </Button>
+      </Content>
     </Container>
   );
 }
