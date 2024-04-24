@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { AddCart, Container, Description, Value } from "./style";
 import GibsonBlueberry from "../../../public/static/images/gibson_blueberry.webp";
+import { toast } from "react-toastify";
 
 export default function ProductCard() {
   return (
@@ -16,7 +19,9 @@ export default function ProductCard() {
         Guitarra Gibson Les Paul Standard 60s - Blueberry Burst
       </Description>
       <Value>R$ 38.990,00</Value>
-      <AddCart>Adicionar ao carrinho</AddCart>
+      <AddCart onClick={() => toast.success("Produto adicionado ao carrinho!")}>
+        Adicionar ao carrinho
+      </AddCart>
     </Container>
   );
 }

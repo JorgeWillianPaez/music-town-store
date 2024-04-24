@@ -11,6 +11,7 @@ export const Container = styled.div`
 
 export const HeaderContent = styled.div`
   display: flex;
+  width: 90%;
 `;
 
 export const HeaderText = styled.div`
