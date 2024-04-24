@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import ProductCarousel from "@/components/ProductCarousel";
 import { Container, HeaderContent, HeaderText } from "./style";
 import Image from "next/image";
-import InstrumentsImage from "../../../public/static/images/banner-instrumentos.webp";
+import InstrumentsImage from "../../assets/banner-instrumentos.webp";
 import Button from "@/components/Button";
 
 export default function Instruments() {

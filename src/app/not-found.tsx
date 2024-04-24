@@ -2,7 +2,7 @@
 
 import { Container, Button } from "./style";
 import { useRouter } from "next/navigation";
-import ImageNotFound from "../../public/not-found.webp";
+import ImageNotFound from "../assets/not-found.webp";
 import Image from "next/image";
 
 export default function NotFound() {

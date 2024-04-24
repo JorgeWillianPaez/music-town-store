@@ -6,7 +6,7 @@ import Button from "@/components/Button";
 import ProductCarousel from "@/components/ProductCarousel";
 import { Container, HeaderContent, HeaderText } from "./style";
 import Image from "next/image";
-import AccessoriesImage from "../../../public/static/images/banner-acessorios.webp";
+import AccessoriesImage from "../../assets/banner-acessorios.webp";
 
 export default function Accessories() {
   return (

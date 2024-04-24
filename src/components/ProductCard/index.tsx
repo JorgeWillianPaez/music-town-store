@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { AddCart, Container, Description, Value } from "./style";
-import GibsonBlueberry from "../../../public/static/images/gibson_blueberry.webp";
+import GibsonBlueberry from "../../assets/gibson_blueberry.webp";
 import { toast } from "react-toastify";
 import { IProduct } from "@/store/productStore";
 

@@ -17,7 +17,7 @@ export default function ProductCarousel(props: IProductCarouselProps) {
       (item) => item.category === props.name
     );
     setFilteredProducts(newProducts);
-  });
+  }, []);
 
   return (
     <Container>

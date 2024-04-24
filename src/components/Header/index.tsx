@@ -8,7 +8,7 @@ import {
   StyledLink,
   MobileNavLinks,
 } from "./style";
-import HamburgerMenu from "../../../public/static/images/menu-hamburguer.png";
+import HamburgerMenu from "../../assets/menu-hamburguer.png";
 import Image from "next/image";
 import { useState } from "react";
 
