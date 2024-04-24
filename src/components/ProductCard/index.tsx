@@ -4,8 +4,9 @@ import Image from "next/image";
 import { AddCart, Container, Description, Value } from "./style";
 import GibsonBlueberry from "../../../public/static/images/gibson_blueberry.webp";
 import { toast } from "react-toastify";
+import { IProduct } from "@/store/productStore";
 
-export default function ProductCard() {
+export default function ProductCard(props: IProduct) {
   return (
     <Container>
       <Image
@@ -15,10 +16,8 @@ export default function ProductCard() {
         alt="Gibson Blueberry"
         style={{ borderRadius: "8px", marginTop: "10px" }}
       />
-      <Description>
-        Guitarra Gibson Les Paul Standard 60s - Blueberry Burst
-      </Description>
-      <Value>R$ 38.990,00</Value>
+      <Description>{props.name}</Description>
+      <Value>R$ {props.price}</Value>
       <AddCart onClick={() => toast.success("Produto adicionado ao carrinho!")}>
         Adicionar ao carrinho
       </AddCart>

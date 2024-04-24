@@ -21,13 +21,18 @@ export default function Header() {
   return (
     <Container>
       <MobileNav>
-        <Image
-          src={HamburgerMenu.src}
-          width={80}
-          height={80}
-          alt="Menu Hamburguer"
-          onClick={() => setMenuActive(!menuActive)}
-        />
+        {menuActive ? (
+          <button onClick={() => setMenuActive(false)}>X</button>
+        ) : (
+          <Image
+            src={HamburgerMenu.src}
+            width={80}
+            height={80}
+            alt="Menu Hamburguer"
+            onClick={() => setMenuActive(true)}
+          />
+        )}
+
         <MobileNavLinks active={menuActive}>
           <StyledLink href="/instruments" active={isPathActive("/instruments")}>
             Instrumentos

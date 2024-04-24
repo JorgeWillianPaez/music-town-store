@@ -8,6 +8,8 @@ export const Container = styled.div`
   width: 100%;
 `;
 
+export const CloseMobileNav = styled.button``;
+
 export const MobileNav = styled.div`
   display: flex;
   flex-direction: column;
@@ -55,7 +57,7 @@ export const StyledLink = styled(Link)<{ active?: boolean }>`
 
   @media (min-width: 768px) {
     height: 68px;
-    font-size: 28px;
+    font-size: 26px;
     padding: 16px;
   }
 `;

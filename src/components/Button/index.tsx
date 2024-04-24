@@ -2,6 +2,10 @@
 
 import { ButtonElement } from "./style";
 
-export default function Button({ children }: any) {
-  return <ButtonElement>{children}</ButtonElement>;
+interface IButtonProps {
+  children: React.ReactNode;
+}
+
+export default function Button({ children, ...props }: IButtonProps) {
+  return <ButtonElement {...props}>{children}</ButtonElement>;
 }
