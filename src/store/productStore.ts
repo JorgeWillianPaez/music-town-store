@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { products } from "./products";
+import { products } from "../utils/products";
 
 export interface IProduct {
   id: number;

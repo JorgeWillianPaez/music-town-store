@@ -5,8 +5,23 @@ import { AddCart, Container, Description, Value } from "./style";
 import GibsonBlueberry from "../../assets/gibson_blueberry.webp";
 import { toast } from "react-toastify";
 import { IProduct } from "@/store/productStore";
+import { useCartStore } from "@/store/cartStore";
 
 export default function ProductCard(props: IProduct) {
+  const { addProduct, getTotalPrice } = useCartStore();
+
+  const addProductToCart = () => {
+    addProduct({
+      id: props.id,
+      name: props.name,
+      category: props.category,
+      price: props.price,
+      image: props.image,
+    });
+    getTotalPrice();
+    toast.success("Produto adicionado ao carrinho!");
+  };
+
   return (
     <Container>
       <Image
@@ -18,9 +33,7 @@ export default function ProductCard(props: IProduct) {
       />
       <Description>{props.name}</Description>
       <Value>R$ {props.price}</Value>
-      <AddCart onClick={() => toast.success("Produto adicionado ao carrinho!")}>
-        Adicionar ao carrinho
-      </AddCart>
+      <AddCart onClick={addProductToCart}>Adicionar ao carrinho</AddCart>
     </Container>
   );
 }

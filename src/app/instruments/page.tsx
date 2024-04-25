@@ -19,7 +19,7 @@ export default function Instruments() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Pellentesque nisi orci, luctus vel nulla at, varius commodo arcu.
             </p>
-            <Button>Encontre seu instrumento</Button>
+            <Button theme="dark">Encontre seu instrumento</Button>
           </HeaderText>
           <Image
             src={InstrumentsImage.src}

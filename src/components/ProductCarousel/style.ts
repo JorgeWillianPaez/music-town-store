@@ -21,8 +21,7 @@ export const Line = styled.div`
 
 export const Cards = styled.div`
   display: flex;
-  justify-content: space-between;
   column-gap: 30px;
-  overflow: scroll;
+  overflow: auto;
   overflow-y: hidden;
 `;

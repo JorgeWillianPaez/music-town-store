@@ -2,17 +2,29 @@ import { create } from "zustand";
 import { IProduct } from "./productStore";
 
 interface ICartStore {
-  cart: IProduct[];
+  cartProducts: IProduct[];
+  totalPrice: number;
   addProduct: (product: IProduct) => void;
-  removeFromCart: (id: number) => void;
+  removeProduct: (id: number) => void;
+  getTotalPrice: () => void;
 }
 
 export const useCartStore = create<ICartStore>((set) => {
   return {
-    cart: [],
+    cartProducts: [],
+    totalPrice: 0,
     addProduct: (product) =>
-      set((state) => ({ cart: [...state.cart, product] })),
-    removeFromCart: (id) =>
-      set((state) => ({ cart: state.cart.filter((item) => item.id === id) })),
+      set((state) => ({ cartProducts: [...state.cartProducts, product] })),
+    removeProduct: (id) =>
+      set((state) => ({
+        cartProducts: state.cartProducts.filter((item) => item.id === id),
+      })),
+    getTotalPrice: () =>
+      set((state) => ({
+        totalPrice: state.cartProducts.reduce(
+          (acc, currentValue) => acc + currentValue.price,
+          0
+        ),
+      })),
   };
 });
