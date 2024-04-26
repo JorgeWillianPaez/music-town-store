@@ -36,7 +36,7 @@ export default function CartProducts() {
             <ProductDetails>
               <div>
                 <p>Produto: {product.name}</p>
-                <p>Preço: {product.price}</p>
+                <p>Preço: {realCurrency.format(product.price)}</p>
               </div>
               <RemoveProductButton onClick={() => handleRemove(product.id)}>
                 <Image

@@ -8,15 +8,12 @@ import Button from "@/components/Button";
 import { useState } from "react";
 import { IProduct, useProductStore } from "@/store/productStore";
 import { FormContainer } from "./style";
-import NewGuitarImage from "../../assets/gibson_blueberry.webp";
+import NewGuitarImage from "../../assets/new_guitar.png";
+import { useRouter } from "next/navigation";
 
 export default function NewProduct() {
   const { currentId, createProduct } = useProductStore();
-
-  const realCurrency = new Intl.NumberFormat("pt-br", {
-    style: "currency",
-    currency: "BRL",
-  });
+  const router = useRouter();
 
   const [formData, setFormData] = useState<IProduct>({
     id: currentId,
@@ -30,20 +27,23 @@ export default function NewProduct() {
   function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target;
 
-    setFormData({ ...formData, [name]: value });
+    if (name === "price") {
+      setFormData({ ...formData, [name]: Number(value) });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   }
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    console.log(formData);
-
     createProduct(formData);
+    router.push("/instruments");
   };
 
   return (
     <>
       <Header />
-      <h1 style={{ marginTop: "20px" }}>
+      <h1 style={{ marginTop: "60px", textAlign: "center" }}>
         Insira as informações do novo produto
       </h1>
       <FormContainer>
