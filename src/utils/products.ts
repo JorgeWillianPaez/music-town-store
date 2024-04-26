@@ -8,6 +8,7 @@ export const products: IProduct[] = [
     category: "Guitarras",
     price: 2500.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ export const products: IProduct[] = [
     category: "Guitarras",
     price: 3500.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const products: IProduct[] = [
     category: "Guitarras",
     price: 6000.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 4,
@@ -29,6 +32,7 @@ export const products: IProduct[] = [
     category: "Guitarras",
     price: 4200.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 5,
@@ -36,6 +40,7 @@ export const products: IProduct[] = [
     category: "Guitarras",
     price: 18000.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 6,
@@ -43,6 +48,7 @@ export const products: IProduct[] = [
     category: "Guitarras",
     price: 8000.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 7,
@@ -50,6 +56,7 @@ export const products: IProduct[] = [
     category: "Guitarras",
     price: 22000.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 8,
@@ -57,6 +64,7 @@ export const products: IProduct[] = [
     category: "Guitarras",
     price: 28000.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 9,
@@ -64,6 +72,7 @@ export const products: IProduct[] = [
     category: "Guitarras",
     price: 3000.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 10,
@@ -71,6 +80,7 @@ export const products: IProduct[] = [
     category: "Guitarras",
     price: 15000.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 11,
@@ -78,6 +88,7 @@ export const products: IProduct[] = [
     category: "Contrabaixos",
     price: 8000.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 12,
@@ -85,6 +96,7 @@ export const products: IProduct[] = [
     category: "Contrabaixos",
     price: 10000.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 13,
@@ -92,6 +104,7 @@ export const products: IProduct[] = [
     category: "Contrabaixos",
     price: 12000.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 14,
@@ -99,6 +112,7 @@ export const products: IProduct[] = [
     category: "Contrabaixos",
     price: 14000.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
   {
     id: 15,
@@ -106,5 +120,6 @@ export const products: IProduct[] = [
     category: "Contrabaixos",
     price: 16000.0,
     image: GuitarImage.src,
+    addedToCart: false,
   },
 ];

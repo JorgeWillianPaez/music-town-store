@@ -8,8 +8,6 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const CloseMobileNav = styled.button``;
-
 export const MobileNav = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,20 +22,34 @@ export const MobileNavLinks = styled.nav<{ active?: boolean }>`
   display: ${(props) => (props.active ? "flex" : "none")};
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+`;
+
+export const CloseHamburgerMenu = styled.button`
+  border: 2px solid #ffffff;
+  border-radius: 28px;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 15px;
+  width: 50px;
+  height: 50px;
 `;
 
 export const NavLinks = styled.nav`
   display: none;
+  width: 96%;
 
   @media (min-width: 480px) {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 110px;
-    width: 98%;
   }
 
   @media (min-width: 768px) {
+    width: 90%;
     height: 160px;
   }
 `;

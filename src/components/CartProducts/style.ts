@@ -52,6 +52,13 @@ export const ProductDetails = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 90%;
+
+  > div {
+    width: 40%;
+    p {
+      font-size: 20px;
+    }
+  }
 `;
 
 export const RemoveProductButton = styled.button`

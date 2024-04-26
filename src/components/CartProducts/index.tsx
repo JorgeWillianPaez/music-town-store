@@ -10,12 +10,17 @@ import GuitarImage from "../../assets/gibson_blueberry.webp";
 import Trash from "../../assets/trash.png";
 
 export default function CartProducts() {
-  const { cartProducts } = useCartStore();
+  const { cartProducts, removeProduct, updateTotalPrice } = useCartStore();
 
   const realCurrency = new Intl.NumberFormat("pt-br", {
     style: "currency",
     currency: "BRL",
   });
+
+  const handleRemove = (id: number) => {
+    removeProduct(id);
+    updateTotalPrice();
+  };
 
   return (
     <Container cartHasItems={cartProducts.length > 0}>
@@ -31,9 +36,9 @@ export default function CartProducts() {
             <ProductDetails>
               <div>
                 <p>Produto: {product.name}</p>
-                <p>Preço unitário: {realCurrency.format(product.price)}</p>
+                <p>Preço: {product.price}</p>
               </div>
-              <RemoveProductButton>
+              <RemoveProductButton onClick={() => handleRemove(product.id)}>
                 <Image
                   src={Trash.src}
                   width={35}

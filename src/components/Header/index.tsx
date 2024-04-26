@@ -7,6 +7,7 @@ import {
   NavLinks,
   StyledLink,
   MobileNavLinks,
+  CloseHamburgerMenu,
 } from "./style";
 import HamburgerMenu from "../../assets/menu-hamburguer.png";
 import Image from "next/image";
@@ -22,7 +23,9 @@ export default function Header() {
     <Container>
       <MobileNav>
         {menuActive ? (
-          <button onClick={() => setMenuActive(false)}>X</button>
+          <CloseHamburgerMenu onClick={() => setMenuActive(false)}>
+            X
+          </CloseHamburgerMenu>
         ) : (
           <Image
             src={HamburgerMenu.src}
@@ -37,36 +40,36 @@ export default function Header() {
           <StyledLink href="/instruments" active={isPathActive("/instruments")}>
             Instrumentos
           </StyledLink>
-          <StyledLink href="/accessories" active={isPathActive("/accessories")}>
-            Acessórios
+          <StyledLink href="/new-product" active={isPathActive("/new-product")}>
+            Novo produto
           </StyledLink>
           <StyledLink href="/cart" active={isPathActive("/cart")}>
             Carrinho
           </StyledLink>
-          <StyledLink href="/about" active={isPathActive("/about")}>
+          {/* <StyledLink href="/about" active={isPathActive("/about")}>
             Sobre
           </StyledLink>
           <StyledLink href="/my-account" active={isPathActive("/my-account")}>
             Minha conta
-          </StyledLink>
+          </StyledLink> */}
         </MobileNavLinks>
       </MobileNav>
       <NavLinks>
         <StyledLink href="/instruments" active={isPathActive("/instruments")}>
           Instrumentos
         </StyledLink>
-        <StyledLink href="/accessories" active={isPathActive("/accessories")}>
-          Acessórios
+        <StyledLink href="/new-product" active={isPathActive("/new-product")}>
+          Novo produto
         </StyledLink>
         <StyledLink href="/cart" active={isPathActive("/cart")}>
           Carrinho
         </StyledLink>
-        <StyledLink href="/about" active={isPathActive("/about")}>
+        {/* <StyledLink href="/about" active={isPathActive("/about")}>
           Sobre
         </StyledLink>
         <StyledLink href="/my-account" active={isPathActive("/my-account")}>
           Minha conta
-        </StyledLink>
+        </StyledLink> */}
       </NavLinks>
     </Container>
   );

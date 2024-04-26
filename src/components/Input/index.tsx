@@ -1,15 +1,19 @@
-import { Container } from "./style";
+import { InputContainer } from "./style";
+import { ChangeEventHandler, HTMLInputTypeAttribute } from "react";
 
 interface IInputProps {
-  label: string;
-  type: string;
+  type?: HTMLInputTypeAttribute | undefined;
+  name: string;
+  value?: any;
+  onChange?: ChangeEventHandler;
 }
 
-export default function Input(props: IInputProps) {
+export default function Input({ type, name, onChange }: IInputProps) {
   return (
-    <Container>
-      <label>{props.label}:</label>
-      <input type={props.type} />
-    </Container>
+    <InputContainer
+      onChange={onChange}
+      name={name}
+      type={type}
+    ></InputContainer>
   );
 }

@@ -4,11 +4,11 @@ import Image from "next/image";
 import { AddCart, Container, Description, Value } from "./style";
 import GibsonBlueberry from "../../assets/gibson_blueberry.webp";
 import { toast } from "react-toastify";
-import { IProduct } from "@/store/productStore";
+import { IProduct, useProductStore } from "@/store/productStore";
 import { useCartStore } from "@/store/cartStore";
 
 export default function ProductCard(props: IProduct) {
-  const { addProduct, getTotalPrice } = useCartStore();
+  const { addProduct, updateTotalPrice } = useCartStore();
 
   const addProductToCart = () => {
     addProduct({
@@ -17,8 +17,9 @@ export default function ProductCard(props: IProduct) {
       category: props.category,
       price: props.price,
       image: props.image,
+      addedToCart: true,
     });
-    getTotalPrice();
+    updateTotalPrice();
     toast.success("Produto adicionado ao carrinho!");
   };
 

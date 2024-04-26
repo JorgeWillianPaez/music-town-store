@@ -6,7 +6,8 @@ interface ICartStore {
   totalPrice: number;
   addProduct: (product: IProduct) => void;
   removeProduct: (id: number) => void;
-  getTotalPrice: () => void;
+  updateTotalPrice: () => void;
+  cleanCart: () => void;
 }
 
 export const useCartStore = create<ICartStore>((set) => {
@@ -17,14 +18,15 @@ export const useCartStore = create<ICartStore>((set) => {
       set((state) => ({ cartProducts: [...state.cartProducts, product] })),
     removeProduct: (id) =>
       set((state) => ({
-        cartProducts: state.cartProducts.filter((item) => item.id === id),
+        cartProducts: state.cartProducts.filter((item) => item.id !== id),
       })),
-    getTotalPrice: () =>
+    updateTotalPrice: () =>
       set((state) => ({
         totalPrice: state.cartProducts.reduce(
           (acc, currentValue) => acc + currentValue.price,
           0
         ),
       })),
+    cleanCart: () => set(() => ({ cartProducts: [] })),
   };
 });

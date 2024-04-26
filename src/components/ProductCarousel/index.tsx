@@ -32,6 +32,7 @@ export default function ProductCarousel(props: IProductCarouselProps) {
             category={product.category}
             image={product.image}
             price={product.price}
+            addedToCart={product.addedToCart}
           ></ProductCard>
         ))}
       </Cards>
