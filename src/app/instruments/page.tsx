@@ -1,7 +1,5 @@
 "use client";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import ProductCarousel from "@/components/ProductCarousel";
 import {
   Container,
@@ -10,12 +8,10 @@ import {
   InstrumentsImageTag,
 } from "./style";
 import InstrumentsImage from "../../assets/banner-instrumentos.webp";
-import Button from "@/components/Button";
 
 export default function Instruments() {
   return (
     <>
-      <Header />
       <Container>
         <HeaderContent>
           <HeaderText>
@@ -46,7 +42,6 @@ export default function Instruments() {
       </Container>
       <ProductCarousel name="Guitarras" />
       <ProductCarousel name="Contrabaixos" />
-      <Footer />
     </>
   );
 }

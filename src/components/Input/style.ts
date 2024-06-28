@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const InputContainer = styled.input`
   font-family: "Londrina Solid", sans-serif;
-  width: 300px;
   padding: 4px;
   outline: none;
   border-radius: 6px;

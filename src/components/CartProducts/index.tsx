@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   Container,
@@ -17,7 +19,7 @@ export default function CartProducts() {
     currency: "BRL",
   });
 
-  const handleRemove = (id: number) => {
+  const handleRemove = (id: string) => {
     removeProduct(id);
     updateTotalPrice();
   };

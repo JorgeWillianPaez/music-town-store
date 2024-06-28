@@ -43,13 +43,13 @@ export default function Header() {
           <StyledLink href="/new-product" active={isPathActive("/new-product")}>
             Novo produto
           </StyledLink>
+          <StyledLink href="/products" active={isPathActive("/products")}>
+            Produtos
+          </StyledLink>
           <StyledLink href="/cart" active={isPathActive("/cart")}>
             Carrinho
           </StyledLink>
-          {/* <StyledLink href="/about" active={isPathActive("/about")}>
-            Sobre
-          </StyledLink>
-          <StyledLink href="/my-account" active={isPathActive("/my-account")}>
+          {/* <StyledLink href="/my-account" active={isPathActive("/my-account")}>
             Minha conta
           </StyledLink> */}
         </MobileNavLinks>
@@ -61,13 +61,13 @@ export default function Header() {
         <StyledLink href="/new-product" active={isPathActive("/new-product")}>
           Novo produto
         </StyledLink>
+        <StyledLink href="/products" active={isPathActive("/products")}>
+          Produtos
+        </StyledLink>
         <StyledLink href="/cart" active={isPathActive("/cart")}>
           Carrinho
         </StyledLink>
-        {/* <StyledLink href="/about" active={isPathActive("/about")}>
-          Sobre
-        </StyledLink>
-        <StyledLink href="/my-account" active={isPathActive("/my-account")}>
+        {/* <StyledLink href="/my-account" active={isPathActive("/my-account")}>
           Minha conta
         </StyledLink> */}
       </NavLinks>

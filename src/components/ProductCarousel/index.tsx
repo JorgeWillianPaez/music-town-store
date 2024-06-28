@@ -1,3 +1,5 @@
+"use client";
+
 import { Container, Title, Line, Cards } from "./style";
 import ProductCard from "../ProductCard";
 import { IProduct, useProductStore } from "@/store/productStore";
@@ -8,16 +10,20 @@ interface IProductCarouselProps {
 }
 
 export default function ProductCarousel(props: IProductCarouselProps) {
-  const products = useProductStore((state) => state.products);
+  const { activeProducts, getActiveProducts } = useProductStore();
 
   const [filteredProducts, setFilteredProducts] = useState<IProduct[]>([]);
 
   useEffect(() => {
-    const newProducts: IProduct[] = products.filter(
+    getActiveProducts();
+  }, []);
+
+  useEffect(() => {
+    const newProducts: IProduct[] = activeProducts.filter(
       (item) => item.category === props.name
     );
     setFilteredProducts(newProducts);
-  }, []);
+  }, [activeProducts]);
 
   return (
     <Container>
@@ -32,7 +38,7 @@ export default function ProductCarousel(props: IProductCarouselProps) {
             category={product.category}
             image={product.image}
             price={product.price}
-            addedToCart={product.addedToCart}
+            active={product.active}
           ></ProductCard>
         ))}
       </Cards>

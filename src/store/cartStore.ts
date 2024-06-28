@@ -5,7 +5,7 @@ interface ICartStore {
   cartProducts: IProduct[];
   totalPrice: number;
   addProduct: (product: IProduct) => void;
-  removeProduct: (id: number) => void;
+  removeProduct: (id: string) => void;
   updateTotalPrice: () => void;
   cleanCart: () => void;
 }

@@ -1,7 +1,5 @@
 "use client";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import CartProducts from "@/components/CartProducts";
 import Button from "@/components/Button";
 import { useCartStore } from "@/store/cartStore";
@@ -28,7 +26,6 @@ export default function Cart() {
 
   return (
     <>
-      <Header />
       <CartProducts />
       <DetailsContainer>
         <h1>Total: {realCurrency.format(totalPrice)}</h1>
@@ -36,7 +33,6 @@ export default function Cart() {
           Finalizar compra
         </Button>
       </DetailsContainer>
-      <Footer />
     </>
   );
 }
